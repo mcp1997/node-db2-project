@@ -28,7 +28,11 @@ router.post(
   checkVinNumberValid,
   checkVinNumberUnique,
   (req, res, next) => {
-    res.json('posting new car')
+    Car.create(req.body)
+      .then(newCar => {
+        res.status(201).json(newCar)
+      })
+      .catch(next)
   })
 
 router.use((err, req, res, next) => { // eslint-disable-line
