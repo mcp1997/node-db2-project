@@ -1,10 +1,15 @@
 // DO YOUR MAGIC
 const express = require('express')
+const Car = require('./cars-model')
 
 const router = express.Router()
 
 router.get('/', (req, res, next) => {
-  res.send('get cars')
+  Car.getAll()
+    .then(cars => {
+      res.json(cars)
+    })
+    .catch(next)
 })
 
 router.get('/:id', (req, res) => {
