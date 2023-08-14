@@ -7,7 +7,7 @@ exports.seed = function(knex) {
           vin: '11111111111111111',
           make: 'Ford',
           model: 'Focus',
-          mileage: '50000',
+          mileage: 50000,
           title: 'clean',
           transmission: 'automatic'
         },
@@ -15,7 +15,7 @@ exports.seed = function(knex) {
           vin: '22222222222222222',
           make: 'Nissan',
           model: 'Altima',
-          mileage: '10000',
+          mileage: 10000,
           title: 'clean',
           transmission: 'manual'
         },
@@ -23,7 +23,7 @@ exports.seed = function(knex) {
           vin: '33333333333333333',
           make: 'Subaru',
           model: 'Outback',
-          mileage: '150000',
+          mileage: 150000,
           title: 'salvage',
         },
       ])
